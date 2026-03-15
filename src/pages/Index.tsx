@@ -3,8 +3,16 @@ import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence 
 import {
   ArrowRight, ArrowUpRight, Star, Menu, X, CheckCircle2, Users, Briefcase, Award,
   Mail, MapPin, Clock, Zap, Shield, BarChart3, Headphones, ShoppingCart, FolderKanban,
-  MessageSquare, ChevronDown
+  MessageSquare, ChevronDown, Linkedin, Instagram, Facebook, Twitter, Globe
 } from "lucide-react";
+
+import teamTaimour from "@/assets/team-taimour.jpg";
+import teamFahad from "@/assets/team-fahad.jpg";
+import teamMuhammad from "@/assets/team-muhammad.jpg";
+import teamUmar from "@/assets/team-umar.jpg";
+import teamQasim from "@/assets/team-qasim.jpg";
+import teamFarhan from "@/assets/team-farhan.jpg";
+import teamZeeshan from "@/assets/team-zeeshan.jpg";
 
 /* ─── DATA ─── */
 const SERVICES = [
@@ -26,13 +34,13 @@ const PROJECTS = [
 ];
 
 const TEAM = [
-  { name: "Taimour A.", role: "Founder & Lead VA", badge: "Top Rated Plus", initials: "TA" },
-  { name: "Fahad Bin A.", role: "Senior VA", badge: "Top Rated Plus", initials: "FA" },
-  { name: "Muhammad F.", role: "CRM Specialist", badge: "Top Rated", initials: "MF" },
-  { name: "Umar F.", role: "Lead Gen Expert", badge: "Top Rated", initials: "UF" },
-  { name: "Qasim J.", role: "E-commerce VA", badge: "Top Rated", initials: "QJ" },
-  { name: "Farhan A.", role: "Project Manager", badge: "Top Rated", initials: "FA" },
-  { name: "Zeeshan N.", role: "Admin Support", badge: "Top Rated", initials: "ZN" },
+  { name: "Taimour A.", role: "Founder & Lead VA", badge: "Top Rated Plus", initials: "TA", image: teamTaimour, bio: "Visionary leader with 5+ years of experience in virtual assistance and business operations. Built Prime Assist from the ground up, specializing in CRM management, lead generation, and scaling remote teams for global clients.", email: "taimour@primeassist.co", isLead: true },
+  { name: "Fahad Bin A.", role: "Senior VA", badge: "Top Rated Plus", initials: "FA", image: teamFahad, bio: "Expert in executive-level administrative support with deep proficiency in Google Workspace and project coordination.", email: "fahad@primeassist.co", isLead: false },
+  { name: "Muhammad F.", role: "CRM Specialist", badge: "Top Rated", initials: "MF", image: teamMuhammad, bio: "CRM architect specializing in GoHighLevel, Salesforce, and HubSpot implementations for scaling businesses.", email: "muhammad@primeassist.co", isLead: false },
+  { name: "Umar F.", role: "Lead Gen Expert", badge: "Top Rated", initials: "UF", image: teamUmar, bio: "Strategic outreach specialist with proven results in B2B lead generation using Apollo, LinkedIn, and cold email campaigns.", email: "umar@primeassist.co", isLead: false },
+  { name: "Qasim J.", role: "E-commerce VA", badge: "Top Rated", initials: "QJ", image: teamQasim, bio: "E-commerce operations expert managing product catalogs, inventory, and marketplace optimization on Shopify and Amazon.", email: "qasim@primeassist.co", isLead: false },
+  { name: "Farhan A.", role: "Project Manager", badge: "Top Rated", initials: "FA", image: teamFarhan, bio: "Certified project manager experienced in Agile methodologies, cross-team coordination, and milestone delivery.", email: "farhan@primeassist.co", isLead: false },
+  { name: "Zeeshan N.", role: "Admin Support", badge: "Top Rated", initials: "ZN", image: teamZeeshan, bio: "Detail-oriented administrative professional handling data entry, scheduling, and operational workflows with precision.", email: "zeeshan@primeassist.co", isLead: false },
 ];
 
 const TESTIMONIALS = [
@@ -47,6 +55,81 @@ const TESTIMONIALS = [
 const TOOLS = ["Slack", "Notion", "Trello", "Salesforce", "GoHighLevel", "Apollo", "HubSpot", "Asana", "Shopify", "ClickUp", "Zendesk", "Monday.com", "Google Workspace", "LinkedIn", "Zapier", "Calendly"];
 
 const NAV_ITEMS = ["Home", "Services", "Work", "Team", "Testimonials", "Contact"];
+
+/* ─── CUSTOM CURSOR ─── */
+function CustomCursor() {
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
+  const mouseX = useSpring(0, { stiffness: 300, damping: 28 });
+  const mouseY = useSpring(0, { stiffness: 300, damping: 28 });
+
+  useEffect(() => {
+    const move = (e: globalThis.MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+      if (dotRef.current) {
+        dotRef.current.style.left = `${e.clientX}px`;
+        dotRef.current.style.top = `${e.clientY}px`;
+      }
+    };
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
+  }, [mouseX, mouseY]);
+
+  return (
+    <>
+      <motion.div
+        ref={cursorRef}
+        className="fixed top-0 left-0 w-10 h-10 rounded-full border-2 border-primary/60 pointer-events-none z-[100] mix-blend-difference hidden md:block"
+        style={{ x: mouseX, y: mouseY, translateX: "-50%", translateY: "-50%" }}
+      />
+      <div
+        ref={dotRef}
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-[100] -translate-x-1/2 -translate-y-1/2 hidden md:block"
+      />
+    </>
+  );
+}
+
+/* ─── GRADIENT ORB BACKGROUND ─── */
+function GradientOrb() {
+  return (
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <motion.div
+        className="absolute w-[500px] h-[500px] rounded-full opacity-[0.07]"
+        style={{
+          background: "radial-gradient(circle, hsl(192 95% 55%) 0%, hsl(280 80% 60%) 40%, hsl(340 80% 55%) 70%, transparent 100%)",
+          filter: "blur(80px)",
+        }}
+        animate={{
+          x: [0, 300, -200, 100, 0],
+          y: [0, -200, 150, -100, 0],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute right-0 bottom-0 w-[400px] h-[400px] rounded-full opacity-[0.05]"
+        style={{
+          background: "radial-gradient(circle, hsl(280 90% 65%) 0%, hsl(192 95% 55%) 50%, transparent 100%)",
+          filter: "blur(100px)",
+        }}
+        animate={{
+          x: [0, -250, 150, -50, 0],
+          y: [0, 150, -200, 100, 0],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+    </div>
+  );
+}
 
 /* ─── 3D TILT CARD ─── */
 function TiltCard({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -176,13 +259,10 @@ function Hero() {
 
   return (
     <section id="home" ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: "linear-gradient(hsl(192 95% 55%) 1px, transparent 1px), linear-gradient(90deg, hsl(192 95% 55%) 1px, transparent 1px)",
         backgroundSize: "60px 60px"
       }} />
-      {/* Gradient orb */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
 
       <motion.div style={{ y, opacity }} className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <Reveal>
@@ -239,7 +319,6 @@ function Hero() {
           </div>
         </Reveal>
 
-        {/* Scroll indicator */}
         <motion.div
           animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
@@ -349,6 +428,9 @@ function Work() {
 
 /* ─── TEAM ─── */
 function Team() {
+  const lead = TEAM.find(m => m.isLead)!;
+  const members = TEAM.filter(m => !m.isLead);
+
   return (
     <section id="team" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -361,23 +443,57 @@ function Team() {
           </div>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {TEAM.map((member, i) => (
+        {/* Lead card — full width */}
+        <Reveal className="mb-10">
+          <TiltCard>
+            <div className="group p-8 md:p-10 rounded-3xl bg-gradient-to-br from-primary/10 via-card to-card border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_60px_-15px_hsl(192_95%_55%/0.2)]">
+              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="relative shrink-0">
+                  <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-[0_0_40px_-10px_hsl(192_95%_55%/0.3)]">
+                    <img src={lead.image} alt={lead.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center gap-1">
+                    <Award size={12} /> {lead.badge}
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">{lead.name}</h3>
+                  <p className="text-lg text-primary font-semibold mb-4">{lead.role}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-5 max-w-2xl">{lead.bio}</p>
+                  <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <a href={`mailto:${lead.email}`} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                      <Mail size={14} className="text-primary" /> {lead.email}
+                    </a>
+                    <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                      <CheckCircle2 size={12} className="text-primary" /> 100% Job Success
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </TiltCard>
+        </Reveal>
+
+        {/* Other members — 3 per row */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {members.map((member, i) => (
             <Reveal key={member.name} delay={i * 0.08}>
-              <TiltCard>
-                <div className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500 text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center">
-                    <span className="font-display text-2xl font-bold text-primary">{member.initials}</span>
+              <TiltCard className="h-full">
+                <div className="group h-full p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500 text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-2xl overflow-hidden border border-primary/20">
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="font-display text-lg font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{member.role}</p>
+                  <p className="text-sm text-primary font-medium mb-2">{member.role}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-3">{member.bio}</p>
+                  <a href={`mailto:${member.email}`} className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center justify-center gap-1 mb-3">
+                    <Mail size={10} /> {member.email}
+                  </a>
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
-                    <Award size={12} />
-                    {member.badge}
+                    <Award size={12} /> {member.badge}
                   </div>
-                  <div className="mt-3 flex items-center justify-center gap-1 text-xs text-muted-foreground">
-                    <CheckCircle2 size={12} className="text-primary" />
-                    100% Job Success
+                  <div className="mt-2 flex items-center justify-center gap-1 text-xs text-muted-foreground">
+                    <CheckCircle2 size={12} className="text-primary" /> 100% Job Success
                   </div>
                 </div>
               </TiltCard>
@@ -404,7 +520,6 @@ function Testimonials() {
         </Reveal>
       </div>
 
-      {/* Marquee row 1 */}
       <div className="relative mb-6">
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
@@ -424,7 +539,6 @@ function Testimonials() {
         </div>
       </div>
 
-      {/* Marquee row 2 */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
@@ -469,9 +583,48 @@ function FooterCTA() {
           </div>
         </Reveal>
 
+        {/* Contact info with socials */}
+        <Reveal delay={0.1}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {/* Emails */}
+            <div className="p-6 rounded-2xl bg-card border border-border text-center">
+              <Mail size={24} className="text-primary mx-auto mb-3" />
+              <h4 className="font-display font-bold text-foreground mb-3">Email Us</h4>
+              <a href="mailto:contact@primeassist.co" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-1">contact@primeassist.co</a>
+              <a href="mailto:taimour@primeassist.co" className="block text-sm text-muted-foreground hover:text-primary transition-colors">taimour@primeassist.co</a>
+            </div>
+            {/* Socials */}
+            <div className="p-6 rounded-2xl bg-card border border-border text-center">
+              <Globe size={24} className="text-primary mx-auto mb-3" />
+              <h4 className="font-display font-bold text-foreground mb-3">Follow Us</h4>
+              <div className="flex items-center justify-center gap-4">
+                <a href="https://linkedin.com/company/primeassist" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all">
+                  <Linkedin size={18} />
+                </a>
+                <a href="https://instagram.com/primeassist" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all">
+                  <Instagram size={18} />
+                </a>
+                <a href="https://facebook.com/primeassist" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all">
+                  <Facebook size={18} />
+                </a>
+                <a href="https://twitter.com/primeassist" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all">
+                  <Twitter size={18} />
+                </a>
+              </div>
+            </div>
+            {/* Location */}
+            <div className="p-6 rounded-2xl bg-card border border-border text-center sm:col-span-2 lg:col-span-1">
+              <MapPin size={24} className="text-primary mx-auto mb-3" />
+              <h4 className="font-display font-bold text-foreground mb-3">Location</h4>
+              <p className="text-sm text-muted-foreground">Remote — Worldwide</p>
+              <p className="text-sm text-muted-foreground">Available 24/7</p>
+            </div>
+          </div>
+        </Reveal>
+
         {/* Tools Marquee */}
         <Reveal delay={0.2}>
-          <div className="relative mt-20 py-8 border-t border-b border-border overflow-hidden">
+          <div className="relative py-8 border-t border-b border-border overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
             <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
             <div className="flex animate-marquee gap-12" style={{ width: "max-content" }}>
@@ -482,15 +635,14 @@ function FooterCTA() {
           </div>
         </Reveal>
 
-        {/* Footer info */}
+        {/* Footer bottom */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 text-sm text-muted-foreground">
           <div className="font-display text-lg font-bold text-foreground">
             PRIME<span className="text-primary">ASSIST</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <div className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> Remote — Worldwide</div>
-            <div className="flex items-center gap-2"><Clock size={14} className="text-primary" /> Available 24/7</div>
-            <div className="flex items-center gap-2"><Mail size={14} className="text-primary" /> Contact via Upwork</div>
+            <a href="mailto:contact@primeassist.co" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary" /> contact@primeassist.co</a>
+            <a href="mailto:taimour@primeassist.co" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary" /> taimour@primeassist.co</a>
           </div>
           <p className="text-xs text-muted-foreground/60">© 2024 Prime Assist. All rights reserved.</p>
         </div>
@@ -509,7 +661,9 @@ function ScrollProgress() {
 /* ─── MAIN PAGE ─── */
 const Index = () => {
   return (
-    <div className="bg-background text-foreground min-h-screen overflow-x-hidden">
+    <div className="bg-background text-foreground min-h-screen overflow-x-hidden cursor-none md:cursor-none">
+      <CustomCursor />
+      <GradientOrb />
       <ScrollProgress />
       <Navigation />
       <Hero />
