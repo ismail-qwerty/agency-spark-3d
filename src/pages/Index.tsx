@@ -259,10 +259,31 @@ function Hero() {
 
   return (
     <section id="home" ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(hsl(192 95% 55%) 1px, transparent 1px), linear-gradient(90deg, hsl(192 95% 55%) 1px, transparent 1px)",
-        backgroundSize: "60px 60px"
-      }} />
+      {/* Aurora Lights */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: "linear-gradient(hsl(192 95% 55%) 1px, transparent 1px), linear-gradient(90deg, hsl(192 95% 55%) 1px, transparent 1px)",
+          backgroundSize: "60px 60px"
+        }} />
+        <motion.div
+          className="absolute -top-1/2 left-1/2 w-[120vw] h-[80vh] -translate-x-1/2 rounded-full blur-[120px] opacity-[0.12]"
+          style={{ background: "radial-gradient(ellipse at center, hsl(192 95% 55%), hsl(210 95% 60%), transparent 70%)" }}
+          animate={{ scale: [1, 1.2, 1], x: ["-50%", "-45%", "-55%", "-50%"], rotate: [0, 5, -5, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute -top-1/3 left-1/4 w-[80vw] h-[60vh] rounded-full blur-[100px] opacity-[0.08]"
+          style={{ background: "radial-gradient(ellipse at center, hsl(280 70% 55%), hsl(192 95% 55%), transparent 70%)" }}
+          animate={{ scale: [1.1, 0.9, 1.1], x: ["0%", "10%", "-5%", "0%"], y: ["0%", "-8%", "5%", "0%"] }}
+          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-0 right-1/4 w-[60vw] h-[50vh] rounded-full blur-[100px] opacity-[0.06]"
+          style={{ background: "radial-gradient(ellipse at center, hsl(160 80% 50%), hsl(192 95% 55%), transparent 70%)" }}
+          animate={{ scale: [0.9, 1.15, 0.9], x: ["0%", "-8%", "8%", "0%"], rotate: [0, -8, 8, 0] }}
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
 
       <motion.div style={{ y, opacity }} className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <Reveal>
