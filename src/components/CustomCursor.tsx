@@ -21,13 +21,15 @@ export function CustomCursor() {
 
   return (
     <>
+      {/* Outer ring — z-[9999] so it stays above modals (z-[200]), no mix-blend-difference */}
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 rounded-full border-2 border-primary/60 pointer-events-none z-[100] mix-blend-difference hidden md:block"
+        className="fixed top-0 left-0 w-10 h-10 rounded-full border-2 border-primary/70 pointer-events-none z-[9999] hidden md:block"
         style={{ x: mouseX, y: mouseY, translateX: "-50%", translateY: "-50%" }}
       />
+      {/* Inner dot */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-[100] -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden md:block"
       />
     </>
   );
