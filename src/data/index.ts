@@ -141,6 +141,13 @@ export const TEAM: TeamMember[] = [
     experience: "2+ years",
   },
   {
+    name: "Wahaj Ali", role: "Operations VA", badge: "Rising Talent", initials: "WA",
+    bio: "Dedicated operations virtual assistant with a strong focus on workflow optimization, task management, and cross-functional support. Wahaj brings energy and precision to every project, ensuring smooth day-to-day operations.",
+    email: "wahaj@primeassist.co", isLead: false,
+    skills: ["Workflow Optimization", "Task Management", "Google Workspace", "Slack", "Notion", "Operations Support"],
+    experience: "2+ years",
+  },
+  {
     name: "Haseeb Hashmi", role: "Digital Marketing VA", badge: "Rising Talent", initials: "HH",
     bio: "Digital marketing specialist focused on content scheduling, social media management, and campaign support.",
     email: "haseeb@primeassist.co", isLead: false,
