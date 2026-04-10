@@ -4,13 +4,11 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-
   build: {
     target: "es2015",
     minify: "esbuild",
@@ -18,17 +16,10 @@ export default defineConfig({
     sourcemap: false,
     assetsInlineLimit: 4096,
   },
-
   server: {
     hmr: true,
   },
-
   optimizeDeps: {
-    include: [
-      "react",
-      "react-dom",
-      "framer-motion",
-      "lucide-react",
-    ],
+    include: ["react", "react-dom", "framer-motion", "lucide-react"],
   },
 });
