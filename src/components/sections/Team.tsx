@@ -29,7 +29,7 @@ function TeamModal({ member, onClose }: { member: TeamMember; onClose: () => voi
             <div className="relative shrink-0">
               {member.image ? (
                 <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-[0_0_30px_-8px_hsl(192_95%_55%/0.3)]">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" loading="lazy" />
                 </div>
               ) : (
                 <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30 flex items-center justify-center">
@@ -67,7 +67,7 @@ function TeamModal({ member, onClose }: { member: TeamMember; onClose: () => voi
             <a href={`mailto:${member.email}`} className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 hover:bg-primary/20 text-primary text-sm font-medium transition-all border border-primary/20 hover:border-primary/40">
               <Mail size={14} /> {member.email}
             </a>
-            <a href="https://www.upwork.com/agencies/primeassist/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.upwork.com/agencies/1953211500372666476/" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold transition-all hover:shadow-[0_0_30px_-5px_hsl(192_95%_55%/0.4)]">
               Hire on Upwork <ExternalLink size={13} />
             </a>
@@ -102,7 +102,7 @@ export function Team() {
               <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <div className="relative shrink-0">
                   <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-[0_0_40px_-10px_hsl(192_95%_55%/0.3)]">
-                    <img src={lead.image} alt={lead.name} className="w-full h-full object-cover" loading="eager" />
+                    <img src={lead.image} alt={lead.name} className="w-full h-full object-cover object-top" loading="eager" />
                   </div>
                   <div className="absolute -bottom-3 -right-3 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center gap-1">
                     <Award size={12} /> {lead.badge}
@@ -137,7 +137,7 @@ export function Team() {
                   onClick={() => setSelectedMember(member)} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
                   <div className="w-24 h-24 mx-auto mb-4 rounded-2xl overflow-hidden border border-primary/20">
                     {member.image ? (
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" loading="lazy" />
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" loading="lazy" />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                         <span className="font-display text-xl font-bold text-primary">{member.initials}</span>
