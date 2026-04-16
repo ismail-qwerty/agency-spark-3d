@@ -67,9 +67,9 @@ function TeamModal({ member, onClose }: { member: TeamMember; onClose: () => voi
             <a href={`mailto:${member.email}`} className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 hover:bg-primary/20 text-primary text-sm font-medium transition-all border border-primary/20 hover:border-primary/40">
               <Mail size={14} /> {member.email}
             </a>
-            <a href="https://www.upwork.com/agencies/1953211500372666476/" target="_blank" rel="noopener noreferrer"
+            <a href={member.linkedin || "https://www.upwork.com/agencies/1953211500372666476/"} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold transition-all hover:shadow-[0_0_30px_-5px_hsl(192_95%_55%/0.4)]">
-              Hire on Upwork <ExternalLink size={13} />
+              View on Upwork <ExternalLink size={13} />
             </a>
           </div>
         </div>

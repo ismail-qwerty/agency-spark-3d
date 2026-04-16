@@ -94,6 +94,7 @@ export const TEAM: TeamMember[] = [
     email: "taimour@primeassist.co", isLead: true,
     skills: ["CRM Strategy", "Team Leadership", "Business Operations", "GoHighLevel", "Lead Generation", "Executive Support"],
     experience: "5+ years",
+    linkedin: "https://www.upwork.com/freelancers/~0133d87f4e45d6912a/",
   },
   {
     name: "Fahad Bin A.", role: "Senior VA", badge: "Top Rated Plus", initials: "FA",
@@ -102,6 +103,7 @@ export const TEAM: TeamMember[] = [
     email: "fahad@primeassist.co", isLead: false,
     skills: ["Google Workspace", "Calendar Management", "Email Handling", "Data Entry", "Research", "Scheduling"],
     experience: "4+ years",
+    linkedin: "https://www.upwork.com/freelancers/~01a168a36f80ec5768/",
   },
   {
     name: "Qasim J.", role: "E-commerce VA", badge: "Top Rated", initials: "QJ",
@@ -110,6 +112,7 @@ export const TEAM: TeamMember[] = [
     email: "qasim@primeassist.co", isLead: false,
     skills: ["Shopify", "Amazon FBA", "Product Listing", "Inventory Management", "WooCommerce", "Catalog SEO"],
     experience: "3+ years",
+    linkedin: "https://www.upwork.com/freelancers/~01732751c367040ad4/",
   },
   {
     name: "Faizan A.", role: "Senior VA", badge: "Top Rated", initials: "FZ",
@@ -126,6 +129,7 @@ export const TEAM: TeamMember[] = [
     email: "muhammad@primeassist.co", isLead: false,
     skills: ["GoHighLevel", "Salesforce", "HubSpot", "Automation", "Pipeline Management", "CRM Migration"],
     experience: "3+ years",
+    linkedin: "https://www.upwork.com/freelancers/~0145264e687c41a87d/",
   },
   {
     name: "Umar F.", role: "Lead Gen Expert", badge: "Top Rated", initials: "UF",
@@ -134,6 +138,7 @@ export const TEAM: TeamMember[] = [
     email: "umar@primeassist.co", isLead: false,
     skills: ["Apollo.io", "LinkedIn Outreach", "Cold Email", "B2B Prospecting", "Lemlist", "Hunter.io"],
     experience: "3+ years",
+    linkedin: "https://www.upwork.com/freelancers/~011fa3eecfec0cd048/",
   },
   {
     name: "Farhan A.", role: "Project Manager", badge: "Top Rated", initials: "FA",
@@ -142,6 +147,7 @@ export const TEAM: TeamMember[] = [
     email: "farhan@primeassist.co", isLead: false,
     skills: ["Agile/Scrum", "Asana", "ClickUp", "Risk Management", "Stakeholder Communication", "Monday.com"],
     experience: "4+ years",
+    linkedin: "https://www.upwork.com/freelancers/~01ba86dc678f426a61/",
   },
   {
     name: "Zeeshan N.", role: "Admin Support", badge: "Top Rated", initials: "ZN",
@@ -150,6 +156,7 @@ export const TEAM: TeamMember[] = [
     email: "zeeshan@primeassist.co", isLead: false,
     skills: ["Data Entry", "Scheduling", "Report Generation", "MS Office", "Document Management", "Transcription"],
     experience: "2+ years",
+    linkedin: "https://www.upwork.com/freelancers/~018ee8191e7142450d/",
   },
   {
     name: "Wahaj Ali", role: "Operations VA", badge: "Rising Talent", initials: "WA",
@@ -158,6 +165,7 @@ export const TEAM: TeamMember[] = [
     email: "wahaj@primeassist.co", isLead: false,
     skills: ["Workflow Optimization", "Task Management", "Google Workspace", "Slack", "Notion", "Operations Support"],
     experience: "2+ years",
+    linkedin: "https://www.upwork.com/freelancers/~014d1b11f8d18412e0/",
   },
   {
     name: "Haseeb Hashmi", role: "Digital Marketing VA", badge: "Rising Talent", initials: "HH",
