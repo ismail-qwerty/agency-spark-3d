@@ -174,17 +174,17 @@ export const TEAM: TeamMember[] = [
     experience: "2+ years",
   },
   {
-    name: "Arslan Bhatti", role: "Tech & Automation VA", badge: "Rising Talent", initials: "AB",
-    bio: "Tech-savvy virtual assistant with expertise in no-code automation and workflow optimization using Zapier and Make.com.",
+    name: "Arslan Bhatti", role: "E-commerce Specialist", badge: "Rising Talent", initials: "AB",
+    bio: "Results-driven e-commerce specialist with hands-on experience building and scaling online stores across Shopify, Amazon, and WooCommerce. Arslan combines technical know-how with marketplace strategy to optimize product listings, streamline inventory management, and maximize revenue for e-commerce brands of all sizes.",
     email: "arslan@prime-assist.net", isLead: false,
-    skills: ["Zapier", "Make.com", "Airtable", "Notion", "API Integrations", "Workflow Automation"],
+    skills: ["Shopify", "Amazon FBA", "WooCommerce", "Product Listing", "Inventory Management", "E-commerce SEO"],
     experience: "2+ years",
   },
   {
-    name: "Ismail Bhatti", role: "Research & Data VA", badge: "Rising Talent", initials: "IB",
-    bio: "Meticulous research analyst and data management specialist excelling at market research and competitor analysis.",
+    name: "Ismail Bhatti", role: "Full Stack Developer", badge: "Rising Talent", initials: "IB",
+    bio: "Versatile full stack developer with deep expertise in the MERN stack and Flutter. Ismail crafts robust, scalable web applications and cross-platform mobile apps — from clean REST APIs and dynamic React frontends to polished Flutter apps for iOS and Android. Passionate about writing maintainable code and delivering seamless user experiences.",
     email: "ismail@prime-assist.net", isLead: false,
-    skills: ["Market Research", "Data Analysis", "Google Sheets", "Competitor Analysis", "Report Writing", "Excel"],
+    skills: ["MongoDB", "Express.js", "React", "Node.js", "Flutter", "Dart"],
     experience: "2+ years",
   },
 ];
