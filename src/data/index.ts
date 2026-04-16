@@ -4,12 +4,11 @@ import {
 
 import teamTaimour from "@/assets/taimour.jpeg";
 import teamFahad from "@/assets/fahad.jpeg";
-import teamMuhammad from "@/assets/team-muhammad.jpg";
+import teamMuhammad from "@/assets/faizan.jpeg";
 import teamUmar from "@/assets/team-umar.jpg";
 import teamQasim from "@/assets/team-qasim.jpg";
 import teamFarhan from "@/assets/team-farhan.jpg";
 import teamZeeshan from "@/assets/zeeshan.jpeg";
-import teamFaizan from "@/assets/faizan.jpeg";
 import teamWahaj from "@/assets/wahaj.jpeg";
 import teamHamza from "@/assets/hamza .jpeg";
 import type { Project, TeamMember } from "@/types";
@@ -113,14 +112,6 @@ export const TEAM: TeamMember[] = [
     skills: ["Shopify", "Amazon FBA", "Product Listing", "Inventory Management", "WooCommerce", "Catalog SEO"],
     experience: "3+ years",
     linkedin: "https://www.upwork.com/freelancers/~01732751c367040ad4/",
-  },
-  {
-    name: "Faizan A.", role: "Senior VA", badge: "Top Rated", initials: "FZ",
-    image: teamFaizan,
-    bio: "Dedicated virtual assistant with a strong background in administrative support, client communication, and operational workflows. Faizan brings reliability and precision to every task, ensuring seamless day-to-day operations for clients.",
-    email: "faizan@primeassist.co", isLead: false,
-    skills: ["Virtual Assistance", "Admin Support", "Client Communication", "Google Workspace", "Data Entry", "Scheduling"],
-    experience: "3+ years",
   },
   {
     name: "Muhammad F.", role: "CRM Specialist", badge: "Top Rated", initials: "MF",

@@ -45,7 +45,7 @@ export function Hero() {
         </Reveal>
         <Reveal delay={0.4}>
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
-            {[{ icon: CheckCircle2, label: "100% Job Success" }, { icon: Briefcase, label: "11+ Projects" }, { icon: Star, label: "5.0★ Rating" }, { icon: Users, label: "12 Specialists" }].map((stat) => (
+            {[{ icon: CheckCircle2, label: "100% Job Success" }, { icon: Briefcase, label: "11+ Projects" }, { icon: Star, label: "5.0★ Rating" }, { icon: Users, label: "11 Specialists" }].map((stat) => (
               <div key={stat.label} className="flex items-center gap-2 text-muted-foreground">
                 <stat.icon size={18} className="text-primary" />
                 <span className="text-sm font-semibold">{stat.label}</span>
