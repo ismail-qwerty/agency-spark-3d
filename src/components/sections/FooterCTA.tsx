@@ -29,8 +29,8 @@ export function FooterCTA() {
             <div className="p-6 rounded-2xl bg-card border border-border text-center">
               <Mail size={24} className="text-primary mx-auto mb-3" />
               <h4 className="font-display font-bold text-foreground mb-3">Email Us</h4>
-              <a href="mailto:contact@primeassist.co" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-1">contact@primeassist.co</a>
-              <a href="mailto:taimour@primeassist.co" className="block text-sm text-muted-foreground hover:text-primary transition-colors">taimour@primeassist.co</a>
+              <a href="mailto:taimourali@prime-assist.net" className="block text-sm text-muted-foreground hover:text-primary transition-colors mb-1">taimourali@prime-assist.net</a>
+              <a href="mailto:taimourali@prime-assist.net" className="block text-sm text-muted-foreground hover:text-primary transition-colors">taimourali@prime-assist.net</a>
             </div>
             <div className="p-6 rounded-2xl bg-card border border-border text-center">
               <Globe size={24} className="text-primary mx-auto mb-3" />
@@ -69,8 +69,8 @@ export function FooterCTA() {
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 text-sm text-muted-foreground">
           <div className="font-display text-lg font-bold text-foreground">PRIME<span className="text-primary">ASSIST</span></div>
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <a href="mailto:contact@primeassist.co" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary" /> contact@primeassist.co</a>
-            <a href="mailto:taimour@primeassist.co" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary" /> taimour@primeassist.co</a>
+            <a href="mailto:taimourali@prime-assist.net" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary" /> taimourali@prime-assist.net</a>
+            <a href="mailto:taimourali@prime-assist.net" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary" /> taimourali@prime-assist.net</a>
           </div>
           <p className="text-xs text-muted-foreground/60">© 2024 Prime Assist. All rights reserved.</p>
         </div>
