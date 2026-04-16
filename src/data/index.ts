@@ -2,13 +2,16 @@ import {
   Briefcase, BarChart3, Zap, Headphones, ShoppingCart, FolderKanban,
 } from "lucide-react";
 
-import teamTaimour from "@/assets/team-taimour.jpg";
-import teamFahad from "@/assets/team-fahad.jpg";
+import teamTaimour from "@/assets/taimour.jpeg";
+import teamFahad from "@/assets/fahad.jpeg";
 import teamMuhammad from "@/assets/team-muhammad.jpg";
 import teamUmar from "@/assets/team-umar.jpg";
 import teamQasim from "@/assets/team-qasim.jpg";
 import teamFarhan from "@/assets/team-farhan.jpg";
-import teamZeeshan from "@/assets/team-zeeshan.jpg";
+import teamZeeshan from "@/assets/zeeshan.jpeg";
+import teamFaizan from "@/assets/faizan.jpeg";
+import teamWahaj from "@/assets/wahaj.jpeg";
+import teamHamza from "@/assets/hamza .jpeg";
 import type { Project, TeamMember } from "@/types";
 
 export const SERVICES = [
@@ -110,6 +113,7 @@ export const TEAM: TeamMember[] = [
   },
   {
     name: "Faizan A.", role: "Senior VA", badge: "Top Rated", initials: "FZ",
+    image: teamFaizan,
     bio: "Dedicated virtual assistant with a strong background in administrative support, client communication, and operational workflows. Faizan brings reliability and precision to every task, ensuring seamless day-to-day operations for clients.",
     email: "faizan@primeassist.co", isLead: false,
     skills: ["Virtual Assistance", "Admin Support", "Client Communication", "Google Workspace", "Data Entry", "Scheduling"],
@@ -149,6 +153,7 @@ export const TEAM: TeamMember[] = [
   },
   {
     name: "Wahaj Ali", role: "Operations VA", badge: "Rising Talent", initials: "WA",
+    image: teamWahaj,
     bio: "Dedicated operations virtual assistant with a strong focus on workflow optimization, task management, and cross-functional support. Wahaj brings energy and precision to every project, ensuring smooth day-to-day operations.",
     email: "wahaj@primeassist.co", isLead: false,
     skills: ["Workflow Optimization", "Task Management", "Google Workspace", "Slack", "Notion", "Operations Support"],
@@ -163,6 +168,7 @@ export const TEAM: TeamMember[] = [
   },
   {
     name: "Hamza Bhatti", role: "Sales Support VA", badge: "Rising Talent", initials: "HB",
+    image: teamHamza,
     bio: "Sales-focused VA specializing in prospecting, CRM data hygiene, and follow-up automation.",
     email: "hamza@primeassist.co", isLead: false,
     skills: ["CRM Data Entry", "Prospecting", "Follow-up Sequences", "Sales Reporting", "Apollo", "HubSpot"],
