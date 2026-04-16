@@ -196,6 +196,22 @@ export const TESTIMONIALS = [
   { text: "Their attention to detail is unmatched. Every task is completed with precision and care. Highly recommend for any business looking to scale.", author: "David L.", company: "Highkey Enterprises" },
   { text: "From project management to customer support, they handle everything seamlessly. It's like having an entire operations team at a fraction of the cost.", author: "Emily T.", company: "SSP Renovations" },
   { text: "The team's technical skills combined with their business acumen make them invaluable. They don't just execute—they strategize and improve processes.", author: "Alex P.", company: "OpenCS AI" },
+  { text: "Fahad delivered the project on time, with great communication. Highly recommend!", author: "Client", company: "Instagram Posts Project" },
+  { text: "Fahad did a great job filling out my DocuSign templates and I will be rehiring him for future projects soon.", author: "Client", company: "DocuSign Template Project" },
+  { text: "I really liked working with Fahad. He completed my work promptly and efficiently, without wasting any time. I look forward to working with him again in the future.", author: "Client", company: "Calendar Management" },
+  { text: "Fahad is an absolute pro. I will continue to hire him. Excellent work, excellent communication and on-time delivery. All in all a fantastic person to work with.", author: "Client", company: "WP Website Project" },
+  { text: "He is an expert in his field, Really satisfied with his work. Highly recommended.", author: "Client", company: "Shopify Website Project" },
+  { text: "It was a fantastic experience. The seller did an excellent job. I am extremely pleased with the end result and highly recommend it.", author: "Client", company: "WordPress Development" },
+  { text: "Professionalism at its peak! Clear communication and demonstrated expertise. Met project requirements flawlessly. A pleasure to work with, highly recommended!", author: "Client", company: "Asana Workspace Cleanup" },
+  { text: "Qasim handled a short admin task for me, including calendar cleanup and inbox organization. He worked quickly, communicated clearly, and delivered everything exactly as requested.", author: "Client", company: "Admin Support" },
+  { text: "Great in his work, will hire again when time is ready.", author: "Client", company: "Sales & Business Development" },
+  { text: "Taimour has been an invaluable asset to our team, particularly in managing our Shopify store. His expertise in handling tasks according to instructions and delivering within specified timelines has been outstanding.", author: "Client", company: "Shopify Store Management" },
+  { text: "Awesome guy! Goes above and beyond to help my small business succeed! Will re-engage very soon, great guy!", author: "Client", company: "Virtual Business Assistance" },
+  { text: "Taimour was a pleasure to work with. He was extremely responsive and provided consistent value for our team. Would absolutely work with him again.", author: "Client", company: "Item Weight Search" },
+  { text: "Excellent work as always I would recommend.", author: "Client", company: "Virtual Assistant & Data Entry" },
+  { text: "Taimour's proficiency in both social media management and CRM systems positions him as a reliable resource for future projects. His track record of success and commitment to excellence make him a top choice.", author: "Client", company: "Social Media & CRM Management" },
+  { text: "Working with Taimour was a great experience. He is a proactive individual who consistently delivers high-quality work on time. Taimour's attention to detail and ability to prioritize tasks effectively ensured everything ran smoothly.", author: "Client", company: "Virtual Assistant - Operational Work" },
+  { text: "Taimour performed exceptionally well with handling our project management software, keeping the CEO updated with tasks and managing email.", author: "Client", company: "Executive Virtual Assistant" },
 ];
 
 export const TOOLS = ["Slack", "Notion", "Trello", "Salesforce", "GoHighLevel", "Apollo", "HubSpot", "Asana", "Shopify", "ClickUp", "Zendesk", "Monday.com", "Google Workspace", "LinkedIn", "Zapier", "Calendly"];
