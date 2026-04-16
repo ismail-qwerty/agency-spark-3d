@@ -10,7 +10,6 @@ function TestimonialCard({ text, author, company }: { text: string; author: stri
       </div>
       <p className="text-sm text-muted-foreground leading-relaxed mb-4">"{text}"</p>
       <div>
-        <p className="text-sm font-semibold text-foreground">{author}</p>
         <p className="text-xs text-primary">{company}</p>
       </div>
     </div>
